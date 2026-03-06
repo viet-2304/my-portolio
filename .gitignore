@@ -24,6 +24,7 @@ logs
 !.env.example
 
 # Claude/AI generated files
+.claude/
 *.skill
 *-knowledge.md
 CLAUDE.md
