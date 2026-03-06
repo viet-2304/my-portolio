@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Reusable component classes */
+.section-padding {
+  padding: 3rem 1rem;
+}
+@media (min-width: 640px) {
+  .section-padding { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (min-width: 768px) {
+  .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+}
+@media (min-width: 1024px) {
+  .section-padding { padding-left: 2rem; padding-right: 2rem; }
+}
+
+.container-content {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+.btn-outline:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+:is(.dark .card) {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+.card-hover {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+.card-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: rgba(37, 99, 235, 0.3);
+  transform: translateY(-4px);
+}
+:is(.dark .card-hover) {
+  background-color: #1e293b;
+  border-color: #334155;
+}
