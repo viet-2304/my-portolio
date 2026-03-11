@@ -30,7 +30,7 @@ const { about } = useProfile()
               <div
                 v-for="tech in about.techIcons"
                 :key="tech.name"
-                class="p-2.5 bg-white dark:bg-slate-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                class="w-11 h-11 flex items-center justify-center bg-white dark:bg-slate-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                 :title="tech.name"
               >
                 <Icon :name="tech.icon" size="24" />

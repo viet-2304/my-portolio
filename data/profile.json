@@ -1,34 +1,50 @@
 {
-  "name": "Nemo",
+  "name": "Viet Pham",
   "title": "Fullstack Developer",
   "tagline": "Building clean, performant web experiences.",
   "email": "viet.p2304@gmail.com",
-  "location": "Ho Chi Minh City, Vietnam",
-  "avatar": "N",
+  "phone": "+84 397132163",
+  "location": "Vietnam",
+  "avatar": "V",
   "resumeUrl": "/resume.pdf",
   "about": {
     "bio": [
-      "I'm a passionate Fullstack Developer based in Ho Chi Minh City, Vietnam. I specialize in building modern, performant web applications with Vue.js, Nuxt, and Node.js. I love turning complex problems into simple, elegant solutions.",
-      "With over 3 years of professional experience, I've worked on diverse projects ranging from e-commerce platforms to real-time collaboration tools. I'm always eager to learn new technologies and take on challenging projects that push my skills to the next level.",
+      "I'm a passionate Fullstack Developer based in Vietnam with over 3 years of programming experience, specializing in building responsive, high-performance web applications. I love turning complex problems into simple, elegant solutions.",
+      "I've worked at companies like Peraichi, AIHELLO, and Trudi AI on diverse projects ranging from e-commerce platforms and AI-powered services to Amazon seller tools. I'm always eager to learn new technologies and take on challenging projects that push my skills to the next level.",
       "When I'm not coding, you can find me exploring new tech, contributing to open-source projects, or writing about web development best practices."
     ],
     "stats": [
       { "value": 3, "label": "Years Experience", "suffix": "+" },
-      { "value": 15, "label": "Projects Completed", "suffix": "+" },
+      { "value": 4, "label": "Companies", "suffix": "" },
       { "value": 10, "label": "Technologies", "suffix": "+" }
     ],
     "techIcons": [
       { "name": "Vue.js", "icon": "logos:vue" },
       { "name": "Nuxt", "icon": "logos:nuxt-icon" },
+      { "name": "Angular", "icon": "logos:angular-icon" },
       { "name": "React", "icon": "logos:react" },
+      { "name": "Ruby", "icon": "logos:ruby" },
       { "name": "TypeScript", "icon": "logos:typescript-icon" },
       { "name": "Node.js", "icon": "logos:nodejs-icon" },
       { "name": "TailwindCSS", "icon": "logos:tailwindcss-icon" }
     ]
   },
+  "education": {
+    "school": "DaNang University of Science and Technology",
+    "major": "Information System",
+    "startDate": "09/2019",
+    "endDate": "08/2023"
+  },
+  "certifications": [
+    {
+      "name": "TOEIC",
+      "score": "610",
+      "icon": "mdi:translate"
+    }
+  ],
   "socials": [
-    { "platform": "GitHub", "url": "https://github.com/nemo", "icon": "mdi:github", "label": "GitHub Profile" },
-    { "platform": "LinkedIn", "url": "https://linkedin.com/in/nemo", "icon": "mdi:linkedin", "label": "LinkedIn Profile" },
+    { "platform": "GitHub", "url": "https://github.com/viet-2304", "icon": "mdi:github", "label": "GitHub Profile" },
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vi%E1%BB%87t-ph%E1%BA%A1m-088718276/", "icon": "mdi:linkedin", "label": "LinkedIn Profile" },
     { "platform": "Email", "url": "mailto:viet.p2304@gmail.com", "icon": "mdi:email-outline", "label": "Send Email" }
   ]
 }

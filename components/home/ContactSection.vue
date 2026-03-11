@@ -147,7 +147,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
                 :aria-label="social.label"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="p-3 bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all"
+                class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all"
               >
                 <Icon :name="social.icon" size="22" />
               </a>

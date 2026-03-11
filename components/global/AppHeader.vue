@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Experience', href: '#experience', icon: 'mdi:briefcase-outline' },
   { label: 'Projects', href: '#projects', icon: 'mdi:code-braces' },
   { label: 'Skills', href: '#skills', icon: 'mdi:lightbulb-outline' },
+  { label: 'Certifications', href: '#certifications', icon: 'mdi:certificate-outline' },
   { label: 'Contact', href: '#contact', icon: 'mdi:email-outline' },
 ]
 

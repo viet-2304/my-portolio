@@ -20,6 +20,13 @@ export interface Profile {
     stats: { value: number; label: string; suffix: string }[]
     techIcons: { name: string; icon: string }[]
   }
+  education: {
+    school: string
+    major: string
+    startDate: string
+    endDate: string
+  }
+  certifications: { name: string; score: string; icon: string }[]
   socials: SocialLink[]
 }
 
