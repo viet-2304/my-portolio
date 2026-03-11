@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { socials } from '~/data/socials'
-
+const { email, location, socials } = useProfile()
 const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useContactForm()
 </script>
 
@@ -111,7 +110,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
 
             <div class="space-y-4">
               <a
-                href="mailto:viet.p2304@gmail.com"
+                :href="`mailto:${email}`"
                 class="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-blue-600 transition-colors"
               >
                 <div class="p-2.5 bg-blue-600/10 rounded-lg">
@@ -119,7 +118,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
                 </div>
                 <div>
                   <p class="text-sm text-slate-500 dark:text-slate-400">Email</p>
-                  <p class="font-medium">viet.p2304@gmail.com</p>
+                  <p class="font-medium">{{ email }}</p>
                 </div>
               </a>
 
@@ -129,7 +128,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
                 </div>
                 <div>
                   <p class="text-sm text-slate-500 dark:text-slate-400">Location</p>
-                  <p class="font-medium">Ho Chi Minh City, Vietnam</p>
+                  <p class="font-medium">{{ location }}</p>
                 </div>
               </div>
             </div>
@@ -148,7 +147,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
                 :aria-label="social.label"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="p-3 bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all"
+                class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-all"
               >
                 <Icon :name="social.icon" size="22" />
               </a>
