@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { socials } from '~/data/socials'
+const { name, socials } = useProfile()
 
 const navLinks = [
   { label: 'Home', href: '#hero', icon: 'mdi:home-outline' },
@@ -47,7 +47,7 @@ onMounted(() => {
     <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
       <!-- Logo -->
       <a href="#hero" class="text-lg font-bold text-blue-600 shrink-0" @click="closeMobileMenu">
-        &lt;Nemo /&gt;
+        &lt;{{ name }} /&gt;
       </a>
 
       <!-- Desktop nav links -->

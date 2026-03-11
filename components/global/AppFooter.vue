@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { socials } from '~/data/socials'
-
+const { name, socials } = useProfile()
 const currentYear = new Date().getFullYear()
 </script>
 
@@ -10,9 +9,9 @@ const currentYear = new Date().getFullYear()
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <!-- Logo & Copyright -->
         <div class="text-center md:text-left">
-          <a href="#" class="text-lg font-bold text-blue-600">&lt;Nemo /&gt;</a>
+          <a href="#" class="text-lg font-bold text-blue-600">&lt;{{ name }} /&gt;</a>
           <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-            &copy; {{ currentYear }} Nemo. All rights reserved.
+            &copy; {{ currentYear }} {{ name }}. All rights reserved.
           </p>
         </div>
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { socials } from '~/data/socials'
+const profile = useProfile()
 
 const typedText = ref('')
-const fullText = 'Building clean, performant web experiences.'
+const fullText = profile.tagline
 const showCursor = ref(true)
 
 onMounted(() => {
@@ -34,16 +34,16 @@ onMounted(() => {
             <span class="text-slate-500">$</span>
             <span>whoami</span>
             <span class="text-slate-500">→</span>
-            <span class="text-white">Nemo</span>
+            <span class="text-white">{{ profile.name }}</span>
             <span class="text-slate-500">|</span>
             <span class="text-blue-400">Developer</span>
           </div>
 
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
-            Hi, I'm <span class="text-blue-600">Nemo</span>
+            Hi, I'm <span class="text-blue-600">{{ profile.name }}</span>
           </h1>
           <h2 class="mt-3 text-xl md:text-2xl font-medium text-slate-500 dark:text-slate-400">
-            Fullstack Developer
+            {{ profile.title }}
           </h2>
 
           <!-- Typed tagline -->
@@ -56,7 +56,7 @@ onMounted(() => {
 
           <!-- CTA Buttons -->
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="/resume.pdf" download class="btn-primary">
+            <a :href="profile.resumeUrl" download class="btn-primary">
               <Icon name="mdi:download" size="18" />
               Download CV
             </a>
@@ -69,7 +69,7 @@ onMounted(() => {
           <!-- Social Links -->
           <div class="mt-8 flex items-center gap-4">
             <a
-              v-for="social in socials"
+              v-for="social in profile.socials"
               :key="social.platform"
               :href="social.url"
               :aria-label="social.label"
@@ -89,7 +89,7 @@ onMounted(() => {
             <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/20 to-blue-600/5 animate-pulse" />
             <!-- Avatar circle -->
             <div class="absolute inset-4 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
-              <span class="text-7xl lg:text-8xl font-bold text-white">N</span>
+              <span class="text-7xl lg:text-8xl font-bold text-white">{{ profile.avatar }}</span>
             </div>
           </div>
         </div>
