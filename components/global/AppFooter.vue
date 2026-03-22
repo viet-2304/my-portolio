@@ -1,22 +1,19 @@
 <script setup lang="ts">
-const { name, socials } = useProfile()
+const { socials } = useProfile()
 const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
-    <div class="container-content px-4 sm:px-6 lg:px-8 py-8">
+  <footer class="border-t border-slate-200 dark:border-slate-800/50">
+    <div class="container-content px-4 sm:px-6 lg:px-8 py-6">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <!-- Logo & Copyright -->
-        <div class="text-center md:text-left">
-          <a href="#" class="text-lg font-bold text-blue-600">&lt;{{ name }} /&gt;</a>
-          <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-            &copy; {{ currentYear }} {{ name }}. All rights reserved.
-          </p>
-        </div>
+        <!-- Copyright -->
+        <p class="text-xs tracking-wider uppercase text-cyan-600 dark:text-accent-cyan">
+          &copy; {{ currentYear }} FullstackDev | Engineered with Precision
+        </p>
 
-        <!-- Social Links -->
-        <div class="flex items-center gap-4">
+        <!-- Links -->
+        <div class="flex items-center gap-6">
           <a
             v-for="social in socials"
             :key="social.platform"
@@ -24,9 +21,9 @@ const currentYear = new Date().getFullYear()
             :aria-label="social.label"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-2 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            class="text-xs tracking-wider uppercase text-slate-500 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-accent-cyan transition-colors"
           >
-            <Icon :name="social.icon" size="20" />
+            {{ social.platform }}
           </a>
         </div>
       </div>

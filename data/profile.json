@@ -10,13 +10,11 @@
   "about": {
     "bio": [
       "I'm a passionate Fullstack Developer based in Vietnam with over 3 years of programming experience, specializing in building responsive, high-performance web applications. I love turning complex problems into simple, elegant solutions.",
-      "I've worked at companies like Peraichi, AIHELLO, and Trudi AI on diverse projects ranging from e-commerce platforms and AI-powered services to Amazon seller tools. I'm always eager to learn new technologies and take on challenging projects that push my skills to the next level.",
-      "When I'm not coding, you can find me exploring new tech, contributing to open-source projects, or writing about web development best practices."
+      "I've worked on diverse projects ranging from e-commerce platforms and AI-powered services to Amazon seller tools. I'm always eager to learn new technologies and take on challenging projects that push my skills to the next level."
     ],
     "stats": [
       { "value": 3, "label": "Years Experience", "suffix": "+" },
-      { "value": 4, "label": "Companies", "suffix": "" },
-      { "value": 10, "label": "Technologies", "suffix": "+" }
+      { "value": 10, "label": "Projects", "suffix": "+" }
     ],
     "techIcons": [
       { "name": "Vue.js", "icon": "logos:vue" },
@@ -37,14 +35,14 @@
   },
   "certifications": [
     {
-      "name": "TOEIC",
-      "score": "610",
-      "icon": "mdi:translate"
+      "name": "Claude Code in Action",
+      "score": "Anthropic — 02/2026",
+      "icon": "mdi:robot-outline",
+      "url": "https://verify.skilljar.com/c/fv7ji349uw62"
     }
   ],
   "socials": [
     { "platform": "GitHub", "url": "https://github.com/viet-2304", "icon": "mdi:github", "label": "GitHub Profile" },
-    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vi%E1%BB%87t-ph%E1%BA%A1m-088718276/", "icon": "mdi:linkedin", "label": "LinkedIn Profile" },
-    { "platform": "Email", "url": "mailto:viet.p2304@gmail.com", "icon": "mdi:email-outline", "label": "Send Email" }
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/vi%E1%BB%87t-ph%E1%BA%A1m-088718276/", "icon": "mdi:linkedin", "label": "LinkedIn Profile" }
   ]
 }

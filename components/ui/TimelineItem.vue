@@ -3,51 +3,50 @@ import type { Experience } from '~/data/experience'
 
 defineProps<{
   experience: Experience
+  isFirst?: boolean
 }>()
 </script>
 
 <template>
-  <div class="relative pl-8 pb-10 last:pb-0 border-l-2 border-slate-200 dark:border-slate-700">
+  <div class="relative pl-8 pb-10 last:pb-0 border-l-2 border-slate-200 dark:border-slate-700/50">
     <!-- Timeline dot -->
-    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-2 border-white dark:border-slate-950" />
+    <div
+      class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-white dark:border-dark"
+      :class="isFirst ? 'bg-cyan-500 dark:bg-accent-cyan' : 'bg-slate-300 dark:bg-slate-600'"
+    />
 
-    <div class="card">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
-        <div>
-          <h3 class="text-lg font-semibold text-slate-900 dark:text-white">
-            {{ experience.role }}
-          </h3>
-          <a
-            v-if="experience.companyUrl"
-            :href="experience.companyUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-blue-600 hover:text-blue-700 font-medium"
-          >
-            {{ experience.company }}
-          </a>
-          <span v-else class="text-blue-600 font-medium">{{ experience.company }}</span>
-        </div>
-        <div class="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap">
-          {{ experience.startDate }} — {{ experience.endDate }}
-        </div>
-      </div>
+    <!-- Date -->
+    <p class="text-sm text-slate-500 uppercase tracking-wider mb-1">
+      {{ experience.startDate }} — {{ experience.endDate }}
+    </p>
 
-      <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">
-        <Icon name="mdi:map-marker-outline" size="14" class="inline" />
-        {{ experience.location }}
-      </p>
+    <!-- Role -->
+    <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+      {{ experience.role }}
+    </h3>
 
-      <ul class="space-y-2">
-        <li
-          v-for="(highlight, index) in experience.highlights"
-          :key="index"
-          class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300"
-        >
-          <Icon name="mdi:check-circle" size="16" class="text-blue-600 mt-0.5 shrink-0" />
-          <span>{{ highlight }}</span>
-        </li>
-      </ul>
-    </div>
+    <!-- Company -->
+    <a
+      v-if="experience.companyUrl"
+      :href="experience.companyUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-cyan-600 dark:text-accent-cyan hover:text-cyan-700 dark:hover:text-accent-cyan/80 font-medium transition-colors"
+    >
+      {{ experience.company }}
+    </a>
+    <span v-else class="text-cyan-600 dark:text-accent-cyan font-medium">{{ experience.company }}</span>
+
+    <!-- Highlights -->
+    <ul class="mt-3 space-y-2">
+      <li
+        v-for="(highlight, index) in experience.highlights"
+        :key="index"
+        class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400"
+      >
+        <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 shrink-0" />
+        <span>{{ highlight }}</span>
+      </li>
+    </ul>
   </div>
 </template>

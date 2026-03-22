@@ -26,10 +26,9 @@ export const useContactForm = () => {
       : !validateEmail(form.email)
         ? 'Please enter a valid email'
         : undefined
-    errors.subject = form.subject.trim() ? undefined : 'Subject is required'
     errors.message = form.message.trim() ? undefined : 'Message is required'
 
-    return !errors.name && !errors.email && !errors.subject && !errors.message
+    return !errors.name && !errors.email && !errors.message
   }
 
   const submitForm = async () => {
@@ -37,7 +36,6 @@ export const useContactForm = () => {
 
     isSubmitting.value = true
     try {
-      // Replace with your Formspree endpoint or Nuxt server route
       await $fetch('/api/contact', {
         method: 'POST',
         body: { ...form },

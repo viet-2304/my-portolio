@@ -2,10 +2,9 @@
   <div>
     <HeroSection />
     <AboutSection />
-    <ExperienceSection />
-    <ProjectsSection />
     <SkillsSection />
-    <CertificationsSection />
+    <ProjectsSection />
+    <ExperienceSection />
     <ContactSection />
   </div>
 </template>
