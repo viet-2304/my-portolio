@@ -8,52 +8,53 @@ defineProps<{
 
 <template>
   <div class="card-hover group overflow-hidden">
-    <!-- Thumbnail placeholder -->
-    <div class="relative h-48 bg-gradient-to-br from-blue-600/10 to-blue-600/5 dark:from-blue-600/20 dark:to-blue-600/10 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
-      <Icon name="mdi:code-braces" size="48" class="text-blue-600/30" />
-
-      <!-- Hover overlay -->
-      <div class="absolute inset-0 bg-blue-600/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-        <a
-          v-if="project.liveUrl"
-          :href="project.liveUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="p-3 bg-white rounded-full text-blue-600 hover:scale-110 transition-transform"
-          aria-label="View live demo"
-        >
-          <Icon name="mdi:open-in-new" size="20" />
-        </a>
-        <a
-          v-if="project.githubUrl"
-          :href="project.githubUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="p-3 bg-white rounded-full text-blue-600 hover:scale-110 transition-transform"
-          aria-label="View source code"
-        >
-          <Icon name="mdi:github" size="20" />
-        </a>
-      </div>
+    <!-- Thumbnail -->
+    <div class="relative aspect-video bg-dark-200 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
+      <div class="absolute inset-0 bg-gradient-to-br from-accent-cyan/5 to-accent-purple/5" />
+      <Icon name="mdi:image-outline" size="48" class="text-slate-700" />
     </div>
 
-    <!-- Content -->
-    <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-      {{ project.title }}
-    </h3>
-    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
-      {{ project.description }}
-    </p>
-
     <!-- Tech tags -->
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2 mb-3">
       <span
-        v-for="tech in project.techStack"
+        v-for="tech in project.techStack.slice(0, 3)"
         :key="tech"
-        class="text-xs px-2 py-1 bg-blue-600/10 text-blue-600 dark:text-blue-400 rounded font-medium"
+        class="text-xs px-2.5 py-1 bg-accent-cyan/10 text-accent-cyan rounded font-medium tracking-wide uppercase"
       >
         {{ tech }}
       </span>
+    </div>
+
+    <!-- Content -->
+    <h3 class="text-lg font-semibold text-white mb-2">
+      {{ project.title }}
+    </h3>
+    <p class="text-sm text-slate-400 mb-4 line-clamp-2">
+      {{ project.description }}
+    </p>
+
+    <!-- Links -->
+    <div class="flex items-center gap-4">
+      <a
+        v-if="project.liveUrl"
+        :href="project.liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1.5 text-sm text-accent-cyan hover:text-accent-cyan/80 transition-colors"
+      >
+        <Icon name="mdi:open-in-new" size="16" />
+        Live Demo
+      </a>
+      <a
+        v-if="project.githubUrl"
+        :href="project.githubUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors"
+      >
+        <Icon name="mdi:code-tags" size="16" />
+        Source
+      </a>
     </div>
   </div>
 </template>

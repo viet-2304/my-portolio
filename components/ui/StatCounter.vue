@@ -26,11 +26,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="text-center">
-    <div class="text-3xl md:text-4xl font-bold text-blue-600">
+  <div>
+    <div class="text-3xl font-bold text-accent-cyan">
       {{ displayValue }}{{ suffix }}
     </div>
-    <div class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+    <div class="mt-1 text-xs tracking-wider uppercase text-slate-500">
       {{ label }}
     </div>
   </div>

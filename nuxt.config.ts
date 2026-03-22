@@ -22,20 +22,20 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
-    preference: 'system',
-    fallback: 'light',
+    preference: 'dark',
+    fallback: 'dark',
   },
 
   app: {
     head: {
-      title: 'Nemo — Developer Portfolio',
+      title: 'Viet Pham — Fullstack Developer',
       htmlAttrs: { lang: 'en' },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Personal portfolio of Nemo — a passionate Developer/Engineer showcasing projects, skills, and experience.' },
-        { property: 'og:title', content: 'Nemo — Developer Portfolio' },
-        { property: 'og:description', content: 'Personal portfolio of Nemo — a passionate Developer/Engineer.' },
+        { name: 'description', content: 'Personal portfolio of Viet Pham — a passionate Fullstack Developer showcasing projects, skills, and experience.' },
+        { property: 'og:title', content: 'Viet Pham — Fullstack Developer' },
+        { property: 'og:description', content: 'Personal portfolio of Viet Pham — a passionate Fullstack Developer.' },
         { property: 'og:image', content: '/og-image.png' },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },

@@ -1,48 +1,33 @@
 <script setup lang="ts">
 import { projects } from '~/data/projects'
 
-const categories = [
-  { key: 'all', label: 'All' },
-  { key: 'frontend', label: 'Frontend' },
-  { key: 'fullstack', label: 'Fullstack' },
-  { key: 'open-source', label: 'Open Source' },
-]
-
-const activeCategory = ref('all')
-
-const filteredProjects = computed(() => {
-  if (activeCategory.value === 'all') return projects
-  return projects.filter(p => p.category === activeCategory.value)
-})
+const featuredProjects = computed(() => projects.filter(p => p.featured))
 </script>
 
 <template>
-  <section id="projects" class="section-padding bg-slate-50 dark:bg-slate-900/50">
+  <section id="projects" class="section-padding">
     <div class="container-content">
-      <SectionHeading
-        title="Projects"
-        subtitle="A selection of projects I've built and contributed to"
-      />
-
-      <!-- Category Filter -->
-      <div class="flex flex-wrap justify-center gap-2 mb-10">
-        <button
-          v-for="cat in categories"
-          :key="cat.key"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors"
-          :class="activeCategory === cat.key
-            ? 'bg-blue-600 text-white'
-            : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'"
-          @click="activeCategory = cat.key"
+      <!-- Header row -->
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12">
+        <div>
+          <p class="section-label">Portfolio</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            Featured Works
+          </h2>
+        </div>
+        <a
+          href="#projects"
+          class="mt-4 sm:mt-0 flex items-center gap-1.5 text-sm text-accent-cyan hover:text-accent-cyan/80 transition-colors"
         >
-          {{ cat.label }}
-        </button>
+          See all projects
+          <Icon name="mdi:arrow-right" size="16" />
+        </a>
       </div>
 
       <!-- Projects Grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <ProjectCard
-          v-for="project in filteredProjects"
+          v-for="project in featuredProjects"
           :key="project.id"
           :project="project"
         />

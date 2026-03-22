@@ -12,6 +12,7 @@ export interface Profile {
   title: string
   tagline: string
   email: string
+  phone?: string
   location: string
   avatar: string
   resumeUrl: string
