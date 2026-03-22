@@ -1,19 +1,7 @@
 <script setup lang="ts">
-import { projects, type Project } from '~/data/projects'
+import { projects } from '~/data/projects'
 
 const featuredProjects = computed(() => projects.filter(p => p.featured))
-
-const selectedProject = ref<Project | null>(null)
-const isModalOpen = ref(false)
-
-const openProject = (project: Project) => {
-  selectedProject.value = project
-  isModalOpen.value = true
-}
-
-const closeModal = () => {
-  isModalOpen.value = false
-}
 </script>
 
 <template>
@@ -33,16 +21,8 @@ const closeModal = () => {
           v-for="project in featuredProjects"
           :key="project.id"
           :project="project"
-          @click="openProject(project)"
         />
       </div>
     </div>
-
-    <!-- Detail Modal -->
-    <ProjectDetailModal
-      :project="selectedProject"
-      :open="isModalOpen"
-      @close="closeModal"
-    />
   </section>
 </template>

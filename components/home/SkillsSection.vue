@@ -31,28 +31,24 @@ const getSkillsByCategory = (category: string) =>
             </h3>
           </div>
 
-          <!-- Skills list -->
-          <ul class="space-y-2.5">
-            <li
+          <!-- Skills icon grid -->
+          <div class="flex flex-wrap gap-3">
+            <div
               v-for="skill in getSkillsByCategory(category.key)"
               :key="skill.name"
-              class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400"
+              class="group relative flex items-center justify-center w-10 h-10 rounded-lg bg-slate-100 dark:bg-dark-300 hover:bg-cyan-50 dark:hover:bg-accent-cyan/10 transition-colors cursor-default"
             >
               <Icon
-                v-if="skill.icon"
                 :name="skill.icon"
-                size="16"
+                size="22"
                 class="shrink-0"
               />
-              <span
-                v-else
-                class="w-4 h-4 flex items-center justify-center shrink-0"
-              >
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 dark:bg-accent-cyan/60" />
+              <!-- Tooltip -->
+              <span class="absolute -top-9 left-1/2 -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-slate-800 dark:bg-dark-400 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                {{ skill.name }}
               </span>
-              {{ skill.name }}
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

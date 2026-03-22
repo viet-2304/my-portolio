@@ -6,16 +6,14 @@ const { about } = useProfile()
   <section id="about" class="section-padding">
     <div class="container-content">
       <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
-        <!-- Photo placeholder -->
+        <!-- Profile Photo -->
         <div class="flex justify-center md:justify-start">
-          <div class="relative w-full max-w-md aspect-[3/4] rounded-xl overflow-hidden glow-border bg-slate-200 dark:bg-dark-200 flex items-center justify-center">
-            <!-- Placeholder avatar -->
-            <div class="text-center">
-              <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-cyan-600/20 dark:from-accent-cyan/20 to-accent-purple/20 flex items-center justify-center mb-4">
-                <span class="text-6xl font-bold text-cyan-600 dark:text-accent-cyan">{{ about.stats[0]?.value ? 'V' : '?' }}</span>
-              </div>
-              <p class="text-sm text-slate-500">Profile Photo</p>
-            </div>
+          <div class="relative w-full max-w-md aspect-[3/4] rounded-xl overflow-hidden glow-border bg-slate-200 dark:bg-dark-200">
+            <img
+              src="/images/profile.jpg"
+              alt="Viet Pham"
+              class="w-full h-full object-cover object-top"
+            />
           </div>
         </div>
 

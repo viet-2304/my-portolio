@@ -51,15 +51,23 @@ const { education, certifications } = useProfile()
             <!-- Certifications -->
             <div v-if="certifications?.length" class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700/50">
               <p class="text-xs tracking-wider uppercase text-slate-500 mb-3">Certifications</p>
-              <div
+              <component
                 v-for="cert in certifications"
                 :key="cert.name"
-                class="flex items-center gap-3"
+                :is="cert.url ? 'a' : 'div'"
+                :href="cert.url || undefined"
+                :target="cert.url ? '_blank' : undefined"
+                :rel="cert.url ? 'noopener noreferrer' : undefined"
+                class="flex items-center gap-3 py-1.5 rounded-lg transition-colors"
+                :class="cert.url ? 'hover:bg-slate-100 dark:hover:bg-dark-300 px-2 -mx-2 cursor-pointer' : ''"
               >
-                <Icon :name="cert.icon" size="18" class="text-cyan-600 dark:text-accent-cyan" />
+                <Icon :name="cert.icon" size="18" class="text-cyan-600 dark:text-accent-cyan flex-shrink-0" />
                 <span class="text-slate-600 dark:text-slate-300 text-sm">{{ cert.name }}</span>
-                <span class="text-cyan-600 dark:text-accent-cyan text-sm font-medium ml-auto">{{ cert.score }}</span>
-              </div>
+                <span class="text-cyan-600 dark:text-accent-cyan text-sm font-medium ml-auto flex items-center gap-1">
+                  {{ cert.score }}
+                  <Icon v-if="cert.url" name="mdi:open-in-new" size="14" class="opacity-60" />
+                </span>
+              </component>
             </div>
           </div>
         </div>

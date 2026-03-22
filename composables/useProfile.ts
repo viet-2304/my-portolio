@@ -27,7 +27,7 @@ export interface Profile {
     startDate: string
     endDate: string
   }
-  certifications: { name: string; score: string; icon: string }[]
+  certifications: { name: string; score: string; icon: string; url?: string }[]
   socials: SocialLink[]
 }
 
