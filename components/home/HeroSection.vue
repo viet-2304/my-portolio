@@ -17,12 +17,12 @@ const profile = useProfile()
         </h1>
 
         <!-- Title -->
-        <h2 class="mt-4 text-xl md:text-2xl italic text-slate-400">
+        <h2 class="mt-4 text-xl md:text-2xl italic text-slate-600 dark:text-slate-400">
           {{ profile.title }}
         </h2>
 
         <!-- Description -->
-        <p class="mt-6 text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        <p class="mt-6 text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
           Building scalable web applications and seamless user experiences
           with precision engineering and creative flair.
         </p>

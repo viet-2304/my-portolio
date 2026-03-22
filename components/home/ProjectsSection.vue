@@ -22,7 +22,7 @@ const closeModal = () => {
       <!-- Header -->
       <div class="mb-12">
         <p class="section-label">Portfolio</p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white">
           Featured Works
         </h2>
       </div>

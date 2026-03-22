@@ -5,7 +5,7 @@ const { isDark, toggleTheme, themeIcon, themeLabel } = useTheme()
 <template>
   <button
     :aria-label="themeLabel"
-    class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+    class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-accent-cyan hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
     @click="toggleTheme($event)"
   >
     <Icon :name="themeIcon" size="20" />

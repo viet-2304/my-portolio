@@ -39,10 +39,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-slate-800/50">
+  <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/50">
     <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
       <!-- Logo -->
-      <a href="#hero" class="text-lg font-bold italic text-accent-cyan shrink-0" @click="closeMobileMenu">
+      <a href="#hero" class="text-lg font-bold italic text-cyan-600 dark:text-accent-cyan shrink-0" @click="closeMobileMenu">
         FullstackDev
       </a>
 
@@ -54,8 +54,8 @@ onMounted(() => {
           :href="link.href"
           class="px-3 py-2 text-sm font-medium transition-all duration-200"
           :class="activeSection === link.href.slice(1)
-            ? 'text-white border-b-2 border-accent-cyan'
-            : 'text-slate-400 hover:text-white'"
+            ? 'text-slate-900 dark:text-white border-b-2 border-cyan-600 dark:border-accent-cyan'
+            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'"
         >
           {{ link.label }}
         </a>
@@ -68,7 +68,7 @@ onMounted(() => {
         <!-- Mobile hamburger -->
         <button
           aria-label="Toggle menu"
-          class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white transition-colors"
+          class="md:hidden p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
           @click="toggleMobileMenu"
         >
           <Icon :name="isMobileMenuOpen ? 'mdi:close' : 'mdi:menu'" size="22" />
@@ -87,7 +87,7 @@ onMounted(() => {
     >
       <div
         v-if="isMobileMenuOpen"
-        class="md:hidden bg-dark-100 border-t border-slate-800/50 shadow-lg"
+        class="md:hidden bg-white dark:bg-dark-100 border-t border-slate-200 dark:border-slate-800/50 shadow-lg"
       >
         <nav class="px-4 py-3 space-y-1">
           <a
@@ -96,8 +96,8 @@ onMounted(() => {
             :href="link.href"
             class="block py-2.5 px-3 rounded-lg text-sm font-medium transition-colors"
             :class="activeSection === link.href.slice(1)
-              ? 'text-accent-cyan bg-accent-cyan/5'
-              : 'text-slate-400 hover:text-white hover:bg-slate-800/50'"
+              ? 'text-cyan-600 dark:text-accent-cyan bg-cyan-50 dark:bg-accent-cyan/5'
+              : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'"
             @click="closeMobileMenu"
           >
             {{ link.label }}

@@ -11,7 +11,7 @@ const getSkillsByCategory = (category: string) =>
       <!-- Header -->
       <div class="text-center mb-12">
         <p class="section-label">Capabilities</p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white">
           Technical Arsenal
         </h2>
       </div>
@@ -25,8 +25,8 @@ const getSkillsByCategory = (category: string) =>
         >
           <!-- Category header -->
           <div class="flex items-center gap-2 mb-5">
-            <Icon :name="category.icon" size="22" class="text-accent-cyan" />
-            <h3 class="font-semibold text-white text-lg">
+            <Icon :name="category.icon" size="22" class="text-cyan-600 dark:text-accent-cyan" />
+            <h3 class="font-semibold text-slate-900 dark:text-white text-lg">
               {{ category.label }}
             </h3>
           </div>
@@ -36,7 +36,7 @@ const getSkillsByCategory = (category: string) =>
             <li
               v-for="skill in getSkillsByCategory(category.key)"
               :key="skill.name"
-              class="flex items-center gap-2 text-sm text-slate-400"
+              class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400"
             >
               <Icon
                 v-if="skill.icon"
@@ -48,7 +48,7 @@ const getSkillsByCategory = (category: string) =>
                 v-else
                 class="w-4 h-4 flex items-center justify-center shrink-0"
               >
-                <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan/60" />
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 dark:bg-accent-cyan/60" />
               </span>
               {{ skill.name }}
             </li>

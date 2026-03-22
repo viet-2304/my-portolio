@@ -27,7 +27,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="text-3xl font-bold text-accent-cyan">
+    <div class="text-3xl font-bold text-cyan-600 dark:text-accent-cyan">
       {{ displayValue }}{{ suffix }}
     </div>
     <div class="mt-1 text-xs tracking-wider uppercase text-slate-500">

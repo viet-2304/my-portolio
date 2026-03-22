@@ -10,21 +10,21 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
         <!-- Contact Info (left) -->
         <div>
           <p class="section-label">Get in Touch</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Let's build something extraordinary
           </h2>
-          <p class="text-slate-400 leading-relaxed mb-8">
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
 
           <!-- Email -->
           <div class="flex items-center gap-4 mb-5">
-            <div class="p-3 bg-accent-cyan/10 rounded-lg">
-              <Icon name="mdi:email-outline" size="20" class="text-accent-cyan" />
+            <div class="p-3 bg-cyan-100 dark:bg-accent-cyan/10 rounded-lg">
+              <Icon name="mdi:email-outline" size="20" class="text-cyan-600 dark:text-accent-cyan" />
             </div>
             <div>
               <p class="text-xs tracking-wider uppercase text-slate-500">Email</p>
-              <a :href="`mailto:${email}`" class="text-white hover:text-accent-cyan transition-colors">
+              <a :href="`mailto:${email}`" class="text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-accent-cyan transition-colors">
                 {{ email }}
               </a>
             </div>
@@ -32,12 +32,12 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
 
           <!-- Phone -->
           <div v-if="phone" class="flex items-center gap-4 mb-8">
-            <div class="p-3 bg-accent-cyan/10 rounded-lg">
-              <Icon name="mdi:phone-outline" size="20" class="text-accent-cyan" />
+            <div class="p-3 bg-cyan-100 dark:bg-accent-cyan/10 rounded-lg">
+              <Icon name="mdi:phone-outline" size="20" class="text-cyan-600 dark:text-accent-cyan" />
             </div>
             <div>
               <p class="text-xs tracking-wider uppercase text-slate-500">Phone</p>
-              <a :href="`tel:${phone}`" class="text-white hover:text-accent-cyan transition-colors">
+              <a :href="`tel:${phone}`" class="text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-accent-cyan transition-colors">
                 {{ phone }}
               </a>
             </div>
@@ -52,7 +52,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
               :aria-label="social.label"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-10 h-10 flex items-center justify-center border border-slate-700 rounded-lg text-slate-400 hover:text-accent-cyan hover:border-accent-cyan/30 transition-all"
+              class="w-10 h-10 flex items-center justify-center border border-slate-300 dark:border-slate-700 rounded-lg text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-accent-cyan hover:border-cyan-600 dark:hover:border-accent-cyan/30 transition-all"
             >
               <Icon :name="social.icon" size="18" />
             </a>
@@ -63,11 +63,11 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
         <div class="card">
           <!-- Success Message -->
           <div v-if="isSubmitted" class="text-center py-8">
-            <Icon name="mdi:check-circle" size="48" class="text-accent-cyan mx-auto mb-4" />
-            <h3 class="text-xl font-semibold text-white mb-2">
+            <Icon name="mdi:check-circle" size="48" class="text-cyan-600 dark:text-accent-cyan mx-auto mb-4" />
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
               Message Sent!
             </h3>
-            <p class="text-slate-400 mb-6">
+            <p class="text-slate-600 dark:text-slate-400 mb-6">
               Thank you for reaching out. I'll get back to you soon.
             </p>
             <button class="btn-outline" @click="resetForm">
@@ -88,7 +88,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
                   v-model="form.name"
                   type="text"
                   placeholder="John Doe"
-                  class="w-full px-4 py-3 bg-dark border border-slate-700 rounded-lg focus:ring-1 focus:ring-accent-cyan focus:border-accent-cyan outline-none transition-all text-white placeholder-slate-600"
+                  class="w-full px-4 py-3 bg-white dark:bg-dark border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-1 focus:ring-cyan-600 dark:focus:ring-accent-cyan focus:border-cyan-600 dark:focus:border-accent-cyan outline-none transition-all text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600"
                 >
                 <p v-if="errors.name" class="mt-1 text-xs text-red-400">{{ errors.name }}</p>
               </div>
@@ -102,7 +102,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
                   v-model="form.email"
                   type="email"
                   placeholder="john@example.com"
-                  class="w-full px-4 py-3 bg-dark border border-slate-700 rounded-lg focus:ring-1 focus:ring-accent-cyan focus:border-accent-cyan outline-none transition-all text-white placeholder-slate-600"
+                  class="w-full px-4 py-3 bg-white dark:bg-dark border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-1 focus:ring-cyan-600 dark:focus:ring-accent-cyan focus:border-cyan-600 dark:focus:border-accent-cyan outline-none transition-all text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600"
                 >
                 <p v-if="errors.email" class="mt-1 text-xs text-red-400">{{ errors.email }}</p>
               </div>
@@ -118,7 +118,7 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
                 v-model="form.message"
                 rows="5"
                 placeholder="How can I help you?"
-                class="w-full px-4 py-3 bg-dark border border-slate-700 rounded-lg focus:ring-1 focus:ring-accent-cyan focus:border-accent-cyan outline-none transition-all resize-none text-white placeholder-slate-600"
+                class="w-full px-4 py-3 bg-white dark:bg-dark border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-1 focus:ring-cyan-600 dark:focus:ring-accent-cyan focus:border-cyan-600 dark:focus:border-accent-cyan outline-none transition-all resize-none text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600"
               />
               <p v-if="errors.message" class="mt-1 text-xs text-red-400">{{ errors.message }}</p>
             </div>
