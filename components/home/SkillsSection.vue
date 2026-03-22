@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { skills, skillCategories, techIcons } from '~/data/skills'
+import { skills, skillCategories } from '~/data/skills'
 
 const getSkillsByCategory = (category: string) =>
-  skills.filter(s => s.category === category).slice(0, 3)
-
-const getCategoryColor = (category: string) => {
-  const cat = skillCategories.find(c => c.key === category)
-  return cat?.colorClass || 'progress-cyan'
-}
+  skills.filter(s => s.category === category)
 </script>
 
 <template>
@@ -29,48 +24,35 @@ const getCategoryColor = (category: string) => {
           class="card"
         >
           <!-- Category header -->
-          <div class="flex items-center gap-2 mb-6">
+          <div class="flex items-center gap-2 mb-5">
             <Icon :name="category.icon" size="22" class="text-accent-cyan" />
             <h3 class="font-semibold text-white text-lg">
               {{ category.label }}
             </h3>
           </div>
 
-          <!-- Skills with progress bars -->
-          <div class="space-y-4">
-            <div
+          <!-- Skills list -->
+          <ul class="space-y-2.5">
+            <li
               v-for="skill in getSkillsByCategory(category.key)"
               :key="skill.name"
+              class="flex items-center gap-2 text-sm text-slate-400"
             >
-              <div class="flex items-center justify-between mb-1.5">
-                <span class="text-xs tracking-wider uppercase text-slate-400">
-                  {{ skill.name }}
-                </span>
-                <span class="text-xs text-slate-500">
-                  {{ skill.proficiency }}%
-                </span>
-              </div>
-              <div class="progress-track">
-                <div
-                  class="progress-bar"
-                  :class="getCategoryColor(category.key)"
-                  :style="{ width: `${skill.proficiency}%` }"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tech icons row -->
-      <div class="mt-12 flex flex-wrap items-center justify-center gap-8">
-        <div
-          v-for="tech in techIcons"
-          :key="tech.name"
-          class="opacity-40 hover:opacity-100 transition-opacity"
-          :title="tech.name"
-        >
-          <Icon :name="tech.icon" size="28" />
+              <Icon
+                v-if="skill.icon"
+                :name="skill.icon"
+                size="16"
+                class="shrink-0"
+              />
+              <span
+                v-else
+                class="w-4 h-4 flex items-center justify-center shrink-0"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan/60" />
+              </span>
+              {{ skill.name }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>

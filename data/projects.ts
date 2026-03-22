@@ -3,6 +3,7 @@ export interface Project {
   title: string
   description: string
   longDescription?: string
+  responsibilities?: string[]
   thumbnail: string
   techStack: string[]
   liveUrl?: string

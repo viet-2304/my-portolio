@@ -12,8 +12,8 @@ const profile = useProfile()
         </p>
 
         <!-- Name with gradient -->
-        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold italic text-gradient leading-tight">
-          {{ profile.name }}
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gradient leading-tight">
+          &lt;{{ profile.name }}/&gt;
         </h1>
 
         <!-- Title -->

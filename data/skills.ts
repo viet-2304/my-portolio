@@ -1,54 +1,54 @@
 export interface Skill {
   name: string
-  icon: string
+  icon?: string
   category: 'frontend' | 'backend' | 'database' | 'tools'
-  proficiency: number // 0-100
 }
 
 export const skills: Skill[] = [
   // Frontend
-  { name: 'Vue.js / Nuxt', icon: 'logos:vue', category: 'frontend', proficiency: 90 },
-  { name: 'JavaScript (ES6+)', icon: 'logos:javascript', category: 'frontend', proficiency: 90 },
-  { name: 'TailwindCSS', icon: 'logos:tailwindcss-icon', category: 'frontend', proficiency: 95 },
-  { name: 'TypeScript', icon: 'logos:typescript-icon', category: 'frontend', proficiency: 85 },
-  { name: 'Angular', icon: 'logos:angular-icon', category: 'frontend', proficiency: 80 },
-  { name: 'React', icon: 'logos:react', category: 'frontend', proficiency: 70 },
+  { name: 'Angular 13+', icon: 'logos:angular-icon', category: 'frontend' },
+  { name: 'React.js', icon: 'logos:react', category: 'frontend' },
+  { name: 'Vue.js', icon: 'logos:vue', category: 'frontend' },
+  { name: 'NuxtJS', icon: 'logos:nuxt-icon', category: 'frontend' },
+  { name: 'TypeScript', icon: 'logos:typescript-icon', category: 'frontend' },
+  { name: 'JavaScript', icon: 'logos:javascript', category: 'frontend' },
+  { name: 'RxJS', category: 'frontend' },
+  { name: 'NGXS', category: 'frontend' },
+  { name: 'PrimeNG', category: 'frontend' },
+  { name: 'TailwindCSS', icon: 'logos:tailwindcss-icon', category: 'frontend' },
+  { name: 'HTML5 / CSS3', icon: 'logos:html-5', category: 'frontend' },
+  { name: 'Storybook', icon: 'logos:storybook-icon', category: 'frontend' },
+  { name: 'Responsive Design', category: 'frontend' },
 
   // Backend
-  { name: 'Node.js', icon: 'logos:nodejs-icon', category: 'backend', proficiency: 80 },
-  { name: 'Ruby', icon: 'logos:ruby', category: 'backend', proficiency: 75 },
-  { name: 'PHP', icon: 'logos:php', category: 'backend', proficiency: 70 },
-  { name: 'Java / Spring', icon: 'logos:java', category: 'backend', proficiency: 65 },
+  { name: 'PHP', icon: 'logos:php', category: 'backend' },
+  { name: 'Ruby', icon: 'logos:ruby', category: 'backend' },
+  { name: 'Java Spring Boot', icon: 'logos:spring-icon', category: 'backend' },
+  { name: 'RESTful APIs', icon: 'mdi:api', category: 'backend' },
 
   // Database
-  { name: 'PostgreSQL', icon: 'logos:postgresql', category: 'database', proficiency: 80 },
-  { name: 'MongoDB', icon: 'logos:mongodb-icon', category: 'database', proficiency: 75 },
-  { name: 'Redis', icon: 'logos:redis', category: 'database', proficiency: 70 },
-  { name: 'MySQL', icon: 'logos:mysql-icon', category: 'database', proficiency: 75 },
+  { name: 'MySQL', icon: 'logos:mysql-icon', category: 'database' },
+  { name: 'PostgreSQL', icon: 'logos:postgresql', category: 'database' },
+  { name: 'Redis', icon: 'logos:redis', category: 'database' },
 
-  // Tools
-  { name: 'Docker & K8s', icon: 'logos:docker-icon', category: 'tools', proficiency: 70 },
-  { name: 'Git / GitHub', icon: 'logos:git-icon', category: 'tools', proficiency: 90 },
-  { name: 'AWS / Vercel', icon: 'logos:aws', category: 'tools', proficiency: 75 },
-  { name: 'Linux', icon: 'logos:linux-tux', category: 'tools', proficiency: 75 },
+  // Tools & AI
+  { name: 'Claude Code', category: 'tools' },
+  { name: 'MCP Module Dev', category: 'tools' },
+  { name: 'Build Skill AI Agent', category: 'tools' },
+  { name: 'Devin', category: 'tools' },
+  { name: 'ChatGPT', category: 'tools' },
+  { name: 'Gemini', category: 'tools' },
+  { name: 'Adobe Express API', category: 'tools' },
+  { name: 'AWS', icon: 'logos:aws', category: 'tools' },
+  { name: 'CDN Integration', category: 'tools' },
+  { name: 'Git / GitHub', icon: 'logos:git-icon', category: 'tools' },
+  { name: 'Docker', icon: 'logos:docker-icon', category: 'tools' },
+  { name: 'Agile / Scrum', category: 'tools' },
 ]
 
 export const skillCategories = [
-  { key: 'frontend', label: 'Frontend', icon: 'mdi:monitor-shimmer', colorClass: 'progress-cyan' },
-  { key: 'backend', label: 'Backend', icon: 'mdi:code-tags', colorClass: 'progress-purple' },
-  { key: 'database', label: 'Database', icon: 'mdi:database-outline', colorClass: 'progress-teal' },
-  { key: 'tools', label: 'Tools', icon: 'mdi:wrench-outline', colorClass: 'progress-cyan' },
+  { key: 'frontend', label: 'Frontend', icon: 'mdi:monitor-shimmer' },
+  { key: 'backend', label: 'Backend', icon: 'mdi:code-tags' },
+  { key: 'database', label: 'Database', icon: 'mdi:database-outline' },
+  { key: 'tools', label: 'AI & Tools', icon: 'mdi:wrench-outline' },
 ] as const
-
-export const techIcons = [
-  { name: 'HTML', icon: 'logos:html-5' },
-  { name: 'CSS', icon: 'logos:css-3' },
-  { name: 'JavaScript', icon: 'logos:javascript' },
-  { name: 'TypeScript', icon: 'logos:typescript-icon' },
-  { name: 'Vue.js', icon: 'logos:vue' },
-  { name: 'Nuxt', icon: 'logos:nuxt-icon' },
-  { name: 'Angular', icon: 'logos:angular-icon' },
-  { name: 'React', icon: 'logos:react' },
-  { name: 'Node.js', icon: 'logos:nodejs-icon' },
-  { name: 'Git', icon: 'logos:git-icon' },
-]
