@@ -3,51 +3,53 @@ const { about } = useProfile()
 </script>
 
 <template>
-  <section id="about" class="section-padding bg-slate-50 dark:bg-slate-900/50">
+  <section id="about" class="section-padding">
     <div class="container-content">
-      <SectionHeading
-        title="About Me"
-        subtitle="A brief introduction about who I am and what I do"
-      />
-
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <!-- Bio -->
-        <div class="space-y-4">
-          <p
-            v-for="(paragraph, index) in about.bio"
-            :key="index"
-            class="text-slate-600 dark:text-slate-300 leading-relaxed"
-          >
-            {{ paragraph }}
-          </p>
-
-          <!-- Tech Stack Icons -->
-          <div class="pt-4">
-            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">
-              Tech I work with daily:
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <div
-                v-for="tech in about.techIcons"
-                :key="tech.name"
-                class="w-11 h-11 flex items-center justify-center bg-white dark:bg-slate-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                :title="tech.name"
-              >
-                <Icon :name="tech.icon" size="24" />
-              </div>
-            </div>
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <!-- Profile Photo -->
+        <div class="flex justify-center md:justify-start">
+          <div class="relative w-full max-w-md aspect-[3/4] rounded-xl overflow-hidden glow-border bg-slate-200 dark:bg-dark-200">
+            <img
+              src="/images/profile.jpg"
+              alt="Viet Pham"
+              class="w-full h-full object-cover object-top"
+            />
           </div>
         </div>
 
-        <!-- Stats -->
-        <div class="grid grid-cols-3 gap-6">
-          <StatCounter
-            v-for="stat in about.stats"
-            :key="stat.label"
-            :value="stat.value"
-            :label="stat.label"
-            :suffix="stat.suffix"
-          />
+        <!-- Text content -->
+        <div>
+          <p class="section-label">About Me</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            Bridging Logic &amp; Creativity
+          </h2>
+
+          <!-- Bio paragraphs -->
+          <div class="space-y-4">
+            <p
+              v-for="(paragraph, index) in about.bio"
+              :key="index"
+              class="text-slate-600 dark:text-slate-400 leading-relaxed"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
+
+          <!-- Stats -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div
+              v-for="stat in about.stats"
+              :key="stat.label"
+              class="border border-slate-200 dark:border-slate-700/50 rounded-xl p-5"
+            >
+              <div class="text-3xl font-bold text-cyan-600 dark:text-accent-cyan">
+                {{ stat.value }}{{ stat.suffix }}
+              </div>
+              <div class="mt-1 text-xs tracking-wider uppercase text-slate-500">
+                {{ stat.label }}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

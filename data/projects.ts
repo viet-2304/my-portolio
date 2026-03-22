@@ -3,6 +3,7 @@ export interface Project {
   title: string
   description: string
   longDescription?: string
+  responsibilities?: string[]
   thumbnail: string
   techStack: string[]
   liveUrl?: string
@@ -17,7 +18,7 @@ export const projects: Project[] = [
     id: 'proj-1',
     title: 'Peraichi E-Commerce Platform',
     description: 'A web platform enabling users to create online seller websites with product management, payments, and e-commerce operations. Includes AI service for auto-generating landing pages and CRM system.',
-    thumbnail: '/images/projects/peraichi.png',
+    thumbnail: '/images/projects/peraichi.jpg',
     techStack: ['PHP', 'VueJS', 'Ruby', 'Redis', 'AWS', 'Claude Code', 'Gemini'],
     liveUrl: 'https://peraichi.co.jp/vn/',
     category: 'fullstack',
@@ -28,7 +29,7 @@ export const projects: Project[] = [
     id: 'proj-2',
     title: 'AIHELLO - Amazon Seller Tools',
     description: 'A web platform designed to assist Amazon sellers in developing and managing products, including campaign and event management for individual listings.',
-    thumbnail: '/images/projects/aihello.png',
+    thumbnail: '/images/projects/aihello.jpg',
     techStack: ['Angular 13+', 'RxJS', 'PrimeNG', 'Amazon Seller API'],
     liveUrl: 'https://www.aihello.com/',
     category: 'frontend',
@@ -39,7 +40,7 @@ export const projects: Project[] = [
     id: 'proj-3',
     title: 'Trudi AI',
     description: 'A website to connect renters with homeowners. Features include core internal components, Storybook integration, and AI-powered voice response system.',
-    thumbnail: '/images/projects/trudi.png',
+    thumbnail: '/images/projects/trudi.jpg',
     techStack: ['Angular 13', 'TypeScript', 'Storybook'],
     liveUrl: 'https://trudi.ai/',
     category: 'frontend',

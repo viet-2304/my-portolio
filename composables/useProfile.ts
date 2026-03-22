@@ -12,6 +12,7 @@ export interface Profile {
   title: string
   tagline: string
   email: string
+  phone?: string
   location: string
   avatar: string
   resumeUrl: string
@@ -26,7 +27,7 @@ export interface Profile {
     startDate: string
     endDate: string
   }
-  certifications: { name: string; score: string; icon: string }[]
+  certifications: { name: string; score: string; icon: string; url?: string }[]
   socials: SocialLink[]
 }
 
