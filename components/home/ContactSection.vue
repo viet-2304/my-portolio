@@ -86,15 +86,18 @@ const { form, errors, isSubmitting, isSubmitted, submitForm, resetForm } = useCo
               <p v-if="errors.message" class="mt-1 text-sm text-red-500">{{ errors.message }}</p>
             </div>
 
-            <button
-              type="submit"
-              :disabled="isSubmitting"
-              class="btn-primary w-full justify-center"
-            >
-              <Icon v-if="isSubmitting" name="mdi:loading" size="18" class="animate-spin" />
-              <Icon v-else name="mdi:send" size="18" />
-              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
-            </button>
+            <div class="relative group">
+              <button
+                type="button"
+                disabled
+                class="btn-primary w-full opacity-50 cursor-not-allowed"
+              >
+                Send Message
+              </button>
+              <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 text-xs font-medium text-white bg-slate-800 dark:bg-dark-400 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                This feature is being implemented
+              </span>
+            </div>
           </form>
         </div>
 
