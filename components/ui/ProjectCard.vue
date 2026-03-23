@@ -4,6 +4,8 @@ import type { Project } from '~/data/projects'
 defineProps<{
   project: Project
 }>()
+
+const { withBase } = useBaseUrl()
 </script>
 
 <template>
@@ -11,7 +13,7 @@ defineProps<{
     <!-- Thumbnail -->
     <div class="relative aspect-video bg-slate-200 dark:bg-dark-200 rounded-lg mb-4 overflow-hidden">
       <img
-        :src="project.thumbnail"
+        :src="withBase(project.thumbnail)"
         :alt="project.title"
         class="w-full h-full object-cover object-top"
       />

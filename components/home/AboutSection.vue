@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { about } = useProfile()
+const { withBase } = useBaseUrl()
 </script>
 
 <template>
@@ -10,7 +11,7 @@ const { about } = useProfile()
         <div class="flex justify-center md:justify-start">
           <div class="relative w-full max-w-md aspect-[3/4] rounded-xl overflow-hidden glow-border bg-slate-200 dark:bg-dark-200">
             <img
-              src="/images/profile.jpg"
+              :src="withBase('/images/profile.jpg')"
               alt="Viet Pham"
               class="w-full h-full object-cover object-top"
             />
