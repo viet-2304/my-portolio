@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
+
   devtools: { enabled: true },
 
   modules: [
@@ -27,6 +29,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: '/my-portolio/',
     head: {
       title: 'Viet Pham — Fullstack Developer',
       htmlAttrs: { lang: 'en' },
