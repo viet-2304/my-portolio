@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { experiences } from '~/data/experience'
 const { education, certifications } = useProfile()
+const { t } = useLanguage()
 </script>
 
 <template>
@@ -9,9 +10,9 @@ const { education, certifications } = useProfile()
       <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
         <!-- Experience (left, wider) -->
         <div class="lg:col-span-3">
-          <p class="section-label">Journey</p>
+          <p class="section-label">{{ t('experience.label') }}</p>
           <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-10">
-            Experience
+            {{ t('experience.heading') }}
           </h2>
 
           <div>
@@ -26,9 +27,9 @@ const { education, certifications } = useProfile()
 
         <!-- Education (right, narrower) -->
         <div class="lg:col-span-2">
-          <p class="section-label">Foundations</p>
+          <p class="section-label">{{ t('experience.educationLabel') }}</p>
           <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-10">
-            Education
+            {{ t('experience.educationHeading') }}
           </h2>
 
           <!-- Education card -->
@@ -50,7 +51,7 @@ const { education, certifications } = useProfile()
 
             <!-- Certifications -->
             <div v-if="certifications?.length" class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700/50">
-              <p class="text-xs tracking-wider uppercase text-slate-500 mb-3">Certifications</p>
+              <p class="text-xs tracking-wider uppercase text-slate-500 mb-3">{{ t('experience.certifications') }}</p>
               <component
                 v-for="cert in certifications"
                 :key="cert.name"

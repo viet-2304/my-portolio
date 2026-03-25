@@ -1,11 +1,13 @@
 <script setup lang="ts">
+const { t } = useLanguage()
+
 const navLinks = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
+  { key: 'nav.home', href: '#hero' },
+  { key: 'nav.about', href: '#about' },
+  { key: 'nav.skills', href: '#skills' },
+  { key: 'nav.projects', href: '#projects' },
+  { key: 'nav.experience', href: '#experience' },
+  { key: 'nav.contact', href: '#contact' },
 ]
 
 const activeSection = ref('hero')
@@ -57,12 +59,13 @@ onMounted(() => {
             ? 'text-slate-900 dark:text-white border-b-2 border-cyan-600 dark:border-accent-cyan'
             : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'"
         >
-          {{ link.label }}
+          {{ t(link.key) }}
         </a>
       </nav>
 
       <!-- Right side: theme toggle + hamburger -->
       <div class="flex items-center gap-2">
+        <LanguageToggle />
         <ThemeToggle />
 
         <!-- Mobile hamburger -->
@@ -100,7 +103,7 @@ onMounted(() => {
               : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'"
             @click="closeMobileMenu"
           >
-            {{ link.label }}
+            {{ t(link.key) }}
           </a>
         </nav>
       </div>

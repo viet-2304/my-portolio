@@ -1,10 +1,33 @@
 <script setup lang="ts">
 import type { Experience } from '~/data/experience'
 
-defineProps<{
+const props = defineProps<{
   experience: Experience
   isFirst?: boolean
 }>()
+
+const { t, tm } = useLanguage()
+
+const expKeyMap: Record<string, string> = {
+  'exp-1': 'exp1',
+  'exp-2': 'exp2',
+  'exp-3': 'exp3',
+  'exp-4': 'exp4',
+}
+
+const i18nKey = computed(() => expKeyMap[props.experience.id])
+
+const translatedRole = computed(() =>
+  i18nKey.value ? t(`experience.${i18nKey.value}.role`) : props.experience.role
+)
+
+const translatedHighlights = computed(() =>
+  i18nKey.value ? tm(`experience.${i18nKey.value}.highlights`) as string[] : props.experience.highlights
+)
+
+const translatedEndDate = computed(() =>
+  props.experience.endDate === 'Present' ? t('experience.present') : props.experience.endDate
+)
 </script>
 
 <template>
@@ -17,12 +40,12 @@ defineProps<{
 
     <!-- Date -->
     <p class="text-sm text-slate-500 uppercase tracking-wider mb-1">
-      {{ experience.startDate }} — {{ experience.endDate }}
+      {{ experience.startDate }} — {{ translatedEndDate }}
     </p>
 
     <!-- Role -->
     <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
-      {{ experience.role }}
+      {{ translatedRole }}
     </h3>
 
     <!-- Company -->
@@ -40,7 +63,7 @@ defineProps<{
     <!-- Highlights -->
     <ul class="mt-3 space-y-2">
       <li
-        v-for="(highlight, index) in experience.highlights"
+        v-for="(highlight, index) in translatedHighlights"
         :key="index"
         class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400"
       >

@@ -1,8 +1,17 @@
 <script setup lang="ts">
 import { skills, skillCategories } from '~/data/skills'
 
+const { t } = useLanguage()
+
 const getSkillsByCategory = (category: string) =>
   skills.filter(s => s.category === category)
+
+const categoryLabelKeys: Record<string, string> = {
+  frontend: 'skills.frontend',
+  backend: 'skills.backend',
+  database: 'skills.database',
+  tools: 'skills.tools',
+}
 </script>
 
 <template>
@@ -10,9 +19,9 @@ const getSkillsByCategory = (category: string) =>
     <div class="container-content">
       <!-- Header -->
       <div class="text-center mb-12">
-        <p class="section-label">Capabilities</p>
+        <p class="section-label">{{ t('skills.label') }}</p>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white">
-          Technical Arsenal
+          {{ t('skills.heading') }}
         </h2>
       </div>
 
@@ -27,7 +36,7 @@ const getSkillsByCategory = (category: string) =>
           <div class="flex items-center gap-2 mb-5">
             <Icon :name="category.icon" size="22" class="text-cyan-600 dark:text-accent-cyan" />
             <h3 class="font-semibold text-slate-900 dark:text-white text-lg">
-              {{ category.label }}
+              {{ t(categoryLabelKeys[category.key]) }}
             </h3>
           </div>
 

@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for New Opportunities",
+    "title": "Fullstack Developer",
+    "description": "Building scalable web applications and seamless user experiences with precision engineering and creative flair.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "label": "About Me",
+    "heading": "Bridging Logic & Creativity",
+    "bio": [
+      "I'm a passionate Fullstack Developer based in Vietnam with over 3 years of programming experience, specializing in building responsive, high-performance web applications. I love turning complex problems into simple, elegant solutions.",
+      "I've worked on diverse projects ranging from e-commerce platforms and AI-powered services to Amazon seller tools. I'm always eager to learn new technologies and take on challenging projects that push my skills to the next level."
+    ],
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "projects": "Projects"
+    }
+  },
+  "skills": {
+    "label": "Capabilities",
+    "heading": "Technical Arsenal",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "tools": "AI & Tools"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "heading": "Featured Works",
+    "liveDemo": "Live Demo",
+    "proj1": {
+      "title": "Peraichi E-Commerce Platform",
+      "description": "A web platform enabling users to create online seller websites with product management, payments, and e-commerce operations. Includes AI service for auto-generating landing pages and CRM system."
+    },
+    "proj2": {
+      "title": "AIHELLO - Amazon Seller Tools",
+      "description": "A web platform designed to assist Amazon sellers in developing and managing products, including campaign and event management for individual listings."
+    },
+    "proj3": {
+      "title": "Trudi AI",
+      "description": "A website to connect renters with homeowners. Features include core internal components, Storybook integration, and AI-powered voice response system."
+    },
+    "proj4": {
+      "title": "Easy Reporting",
+      "description": "A website that allows users to report office issues such as machinery or equipment malfunction, with integrated database and reporting features."
+    }
+  },
+  "experience": {
+    "label": "Journey",
+    "heading": "Experience",
+    "educationLabel": "Foundations",
+    "educationHeading": "Education",
+    "certifications": "Certifications",
+    "present": "Present",
+    "exp1": {
+      "role": "Full Stack Developer",
+      "highlights": [
+        "Analyzed user requirements and defined solutions for CRM system development",
+        "Built AI-powered landing page generator using Claude Code and Gemini",
+        "Developed MCP (Model Context Protocol) modules to extend AI service capabilities",
+        "Integrated third-party APIs including Fincode, Adobe Express, Fullstar, and CDN services",
+        "Investigated and resolved production caching issues with CDN optimization",
+        "Collaborated with cross-functional teams using Agile/Scrum"
+      ]
+    },
+    "exp2": {
+      "role": "Frontend Developer",
+      "highlights": [
+        "Led a front-end team of 2 developers — conducted code reviews and managed tasks",
+        "Acted as solution architect, designing scalable application structures",
+        "Integrated Amazon Seller API for real-time product and sales data sync",
+        "Built SmartView, Repricing engine, Campaign Creator, Budget management modules",
+        "Developed subscription page with price analysis and ad management dashboards",
+        "Translated complex business requirements into technical specifications",
+        "Proposed feature enhancements that increased platform usability"
+      ]
+    },
+    "exp3": {
+      "role": "Frontend Developer",
+      "highlights": [
+        "Implemented features and functionality using Angular 13",
+        "Created core module and Storybook for the project",
+        "Built AI-powered voice response system",
+        "Provided support to internship partners"
+      ]
+    },
+    "exp4": {
+      "role": "Frontend Developer Intern",
+      "highlights": [
+        "Collaborated with BE team to create the database for Easy Reporting project",
+        "Collaborated with FE team to develop and implement the website UI",
+        "Built features for reporting machinery or equipment malfunction"
+      ]
+    }
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "heading": "Let's build something extraordinary",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "email": "Email",
+    "phone": "Phone",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "messagePlaceholder": "How can I help you?",
+      "send": "Send Message",
+      "disabled": "This feature is being implemented",
+      "successTitle": "Message Sent!",
+      "successDescription": "Thank you for reaching out. I'll get back to you soon.",
+      "sendAnother": "Send Another Message"
+    }
+  },
+  "footer": {
+    "copyright": "Engineered with Precision"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "experience": "Kinh nghiệm",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "available": "Sẵn sàng cho cơ hội mới",
+    "title": "Lập trình viên Fullstack",
+    "description": "Xây dựng ứng dụng web có khả năng mở rộng và trải nghiệm người dùng liền mạch với kỹ thuật chính xác và phong cách sáng tạo.",
+    "viewProjects": "Xem dự án",
+    "contactMe": "Liên hệ"
+  },
+  "about": {
+    "label": "Về tôi",
+    "heading": "Kết nối Logic & Sáng tạo",
+    "bio": [
+      "Tôi là một Lập trình viên Fullstack đam mê tại Việt Nam với hơn 3 năm kinh nghiệm lập trình, chuyên xây dựng các ứng dụng web responsive, hiệu suất cao. Tôi thích biến những vấn đề phức tạp thành những giải pháp đơn giản, tinh tế.",
+      "Tôi đã làm việc trên nhiều dự án đa dạng từ nền tảng thương mại điện tử, dịch vụ AI đến công cụ bán hàng Amazon. Tôi luôn háo hức học hỏi công nghệ mới và đảm nhận những dự án thách thức để nâng cao kỹ năng."
+    ],
+    "stats": {
+      "yearsExperience": "Năm kinh nghiệm",
+      "projects": "Dự án"
+    }
+  },
+  "skills": {
+    "label": "Năng lực",
+    "heading": "Kho vũ khí công nghệ",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Cơ sở dữ liệu",
+    "tools": "AI & Công cụ"
+  },
+  "projects": {
+    "label": "Danh mục",
+    "heading": "Dự án tiêu biểu",
+    "liveDemo": "Xem trực tiếp",
+    "proj1": {
+      "title": "Peraichi - Nền tảng Thương mại điện tử",
+      "description": "Nền tảng web cho phép người dùng tạo website bán hàng trực tuyến với quản lý sản phẩm, thanh toán và vận hành thương mại điện tử. Bao gồm dịch vụ AI tự động tạo landing page và hệ thống CRM."
+    },
+    "proj2": {
+      "title": "AIHELLO - Công cụ bán hàng Amazon",
+      "description": "Nền tảng web hỗ trợ người bán Amazon phát triển và quản lý sản phẩm, bao gồm quản lý chiến dịch và sự kiện cho từng sản phẩm."
+    },
+    "proj3": {
+      "title": "Trudi AI",
+      "description": "Website kết nối người thuê với chủ nhà. Bao gồm các component nội bộ, tích hợp Storybook và hệ thống phản hồi giọng nói bằng AI."
+    },
+    "proj4": {
+      "title": "Easy Reporting",
+      "description": "Website cho phép người dùng báo cáo các vấn đề văn phòng như hỏng hóc máy móc hoặc thiết bị, với cơ sở dữ liệu tích hợp và tính năng báo cáo."
+    }
+  },
+  "experience": {
+    "label": "Hành trình",
+    "heading": "Kinh nghiệm",
+    "educationLabel": "Nền tảng",
+    "educationHeading": "Học vấn",
+    "certifications": "Chứng chỉ",
+    "present": "Hiện tại",
+    "exp1": {
+      "role": "Lập trình viên Full Stack",
+      "highlights": [
+        "Phân tích yêu cầu người dùng và đề xuất giải pháp cho phát triển hệ thống CRM",
+        "Xây dựng công cụ tạo landing page bằng AI sử dụng Claude Code và Gemini",
+        "Phát triển các module MCP (Model Context Protocol) để mở rộng khả năng dịch vụ AI",
+        "Tích hợp API bên thứ ba bao gồm Fincode, Adobe Express, Fullstar và dịch vụ CDN",
+        "Điều tra và giải quyết vấn đề caching trên production với tối ưu hóa CDN",
+        "Phối hợp với các nhóm đa chức năng theo phương pháp Agile/Scrum"
+      ]
+    },
+    "exp2": {
+      "role": "Lập trình viên Frontend",
+      "highlights": [
+        "Dẫn dắt nhóm front-end 2 người — review code và quản lý công việc",
+        "Đảm nhận vai trò solution architect, thiết kế kiến trúc ứng dụng có khả năng mở rộng",
+        "Tích hợp Amazon Seller API để đồng bộ dữ liệu sản phẩm và bán hàng thời gian thực",
+        "Xây dựng các module SmartView, Repricing engine, Campaign Creator, Budget management",
+        "Phát triển trang subscription với phân tích giá và dashboard quản lý quảng cáo",
+        "Chuyển đổi yêu cầu nghiệp vụ phức tạp thành đặc tả kỹ thuật",
+        "Đề xuất cải tiến tính năng giúp tăng khả năng sử dụng nền tảng"
+      ]
+    },
+    "exp3": {
+      "role": "Lập trình viên Frontend",
+      "highlights": [
+        "Triển khai các tính năng và chức năng sử dụng Angular 13",
+        "Tạo core module và Storybook cho dự án",
+        "Xây dựng hệ thống phản hồi giọng nói bằng AI",
+        "Hỗ trợ các đối tác thực tập"
+      ]
+    },
+    "exp4": {
+      "role": "Thực tập sinh Frontend",
+      "highlights": [
+        "Phối hợp với nhóm BE để tạo cơ sở dữ liệu cho dự án Easy Reporting",
+        "Phối hợp với nhóm FE để phát triển và triển khai giao diện website",
+        "Xây dựng tính năng báo cáo hỏng hóc máy móc hoặc thiết bị"
+      ]
+    }
+  },
+  "contact": {
+    "label": "Liên hệ",
+    "heading": "Hãy cùng xây dựng điều phi thường",
+    "description": "Tôi luôn sẵn sàng thảo luận về các dự án mới, ý tưởng sáng tạo, hoặc cơ hội để trở thành một phần trong tầm nhìn của bạn.",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "form": {
+      "name": "Họ và tên",
+      "email": "Địa chỉ Email",
+      "message": "Tin nhắn",
+      "namePlaceholder": "Nguyễn Văn A",
+      "emailPlaceholder": "email@example.com",
+      "messagePlaceholder": "Tôi có thể giúp gì cho bạn?",
+      "send": "Gửi tin nhắn",
+      "disabled": "Tính năng đang được phát triển",
+      "successTitle": "Đã gửi tin nhắn!",
+      "successDescription": "Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi sớm nhất có thể.",
+      "sendAnother": "Gửi tin nhắn khác"
+    }
+  },
+  "footer": {
+    "copyright": "Xây dựng với sự chính xác"
+  }
+}
