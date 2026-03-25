@@ -1,6 +1,14 @@
 <script setup lang="ts">
 const { about } = useProfile()
 const { withBase } = useBaseUrl()
+const { t, tm } = useLanguage()
+
+const bioParagraphs = computed(() => tm('about.bio') as string[])
+
+const statLabelKeys: Record<string, string> = {
+  'Years Experience': 'about.stats.yearsExperience',
+  'Projects': 'about.stats.projects',
+}
 </script>
 
 <template>
@@ -20,15 +28,15 @@ const { withBase } = useBaseUrl()
 
         <!-- Text content -->
         <div>
-          <p class="section-label">About Me</p>
+          <p class="section-label">{{ t('about.label') }}</p>
           <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-            Bridging Logic &amp; Creativity
+            {{ t('about.heading') }}
           </h2>
 
           <!-- Bio paragraphs -->
           <div class="space-y-4">
             <p
-              v-for="(paragraph, index) in about.bio"
+              v-for="(paragraph, index) in bioParagraphs"
               :key="index"
               class="text-slate-600 dark:text-slate-400 leading-relaxed"
             >
@@ -47,7 +55,7 @@ const { withBase } = useBaseUrl()
                 {{ stat.value }}{{ stat.suffix }}
               </div>
               <div class="mt-1 text-xs tracking-wider uppercase text-slate-500">
-                {{ stat.label }}
+                {{ statLabelKeys[stat.label] ? t(statLabelKeys[stat.label]) : stat.label }}
               </div>
             </div>
           </div>

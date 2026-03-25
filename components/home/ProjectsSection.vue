@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { projects } from '~/data/projects'
 
+const { t } = useLanguage()
+
 const featuredProjects = computed(() => projects.filter(p => p.featured))
 </script>
 
@@ -9,9 +11,9 @@ const featuredProjects = computed(() => projects.filter(p => p.featured))
     <div class="container-content">
       <!-- Header -->
       <div class="mb-12">
-        <p class="section-label">Portfolio</p>
+        <p class="section-label">{{ t('projects.label') }}</p>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white">
-          Featured Works
+          {{ t('projects.heading') }}
         </h2>
       </div>
 

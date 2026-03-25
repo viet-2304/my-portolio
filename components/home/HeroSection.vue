@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const profile = useProfile()
+const { t } = useLanguage()
 </script>
 
 <template>
@@ -8,7 +9,7 @@ const profile = useProfile()
       <div class="max-w-3xl mx-auto text-center">
         <!-- Status badge -->
         <p class="section-label mb-6">
-          Available for New Opportunities
+          {{ t('hero.available') }}
         </p>
 
         <!-- Name with gradient -->
@@ -18,22 +19,21 @@ const profile = useProfile()
 
         <!-- Title -->
         <h2 class="mt-4 text-xl md:text-2xl italic text-slate-600 dark:text-slate-400">
-          {{ profile.title }}
+          {{ t('hero.title') }}
         </h2>
 
         <!-- Description -->
         <p class="mt-6 text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          Building scalable web applications and seamless user experiences
-          with precision engineering and creative flair.
+          {{ t('hero.description') }}
         </p>
 
         <!-- CTA Buttons -->
         <div class="mt-10 flex flex-wrap justify-center gap-4">
           <a href="#projects" class="btn-primary">
-            View Projects
+            {{ t('hero.viewProjects') }}
           </a>
           <a href="#contact" class="btn-outline">
-            Contact Me
+            {{ t('hero.contactMe') }}
           </a>
         </div>
       </div>
