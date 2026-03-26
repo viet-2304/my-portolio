@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { socials } = useProfile()
 const currentYear = new Date().getFullYear()
+const { t } = useLanguage()
 </script>
 
 <template>
@@ -9,7 +10,7 @@ const currentYear = new Date().getFullYear()
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <!-- Copyright -->
         <p class="text-xs tracking-wider uppercase text-cyan-600 dark:text-accent-cyan">
-          &copy; {{ currentYear }} FullstackDev | Engineered with Precision
+          &copy; {{ currentYear }} FullstackDev | {{ t('footer.copyright') }}
         </p>
 
         <!-- Links -->
